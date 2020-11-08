@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{732CC2F6-8BA7-442E-84AF-192BB7CB5505}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ui.Wpf", "Ui.Wpf\Ui.Wpf.csproj", "{D327C8A3-B8D0-43E6-8694-8D36E843C657}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D327C8A3-B8D0-43E6-8694-8D36E843C657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D327C8A3-B8D0-43E6-8694-8D36E843C657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D327C8A3-B8D0-43E6-8694-8D36E843C657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D327C8A3-B8D0-43E6-8694-8D36E843C657}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {533B2BC6-73F4-404A-84D5-4F13F6706A30}
+	EndGlobalSection
+EndGlobal
