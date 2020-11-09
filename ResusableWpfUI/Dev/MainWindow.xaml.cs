@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Ui.Wpf;
 
 namespace Dev
 {
@@ -23,6 +24,14 @@ namespace Dev
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void OnClick(object sender, RoutedEventArgs e)
+        {
+            var theme = Theme.ThemeType == ThemeType.Light ?
+                ThemeType.Dark : ThemeType.Light;
+
+            Theme.LoadThemeType(theme);
         }
     }
 }
