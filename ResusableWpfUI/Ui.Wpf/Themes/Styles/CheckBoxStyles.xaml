@@ -55,26 +55,18 @@
 
         <ControlTemplate.Triggers>
             <Trigger Property="HasContent" Value="true">
-                <Setter Property="FocusVisualStyle" Value="{StaticResource OptionMarkFocusVisual}" />
                 <Setter Property="Padding" Value="4,-1,0,0" />
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter TargetName="checkBoxBorder" Property="Background" Value="{StaticResource OptionMark.MouseOver.Background}" />
-                <Setter TargetName="checkBoxBorder" Property="BorderBrush" Value="{StaticResource OptionMark.MouseOver.Border}" />
-                <Setter TargetName="optionMark" Property="Fill" Value="{StaticResource OptionMark.MouseOver.Glyph}" />
-                <Setter TargetName="indeterminateMark" Property="Fill" Value="{StaticResource OptionMark.MouseOver.Glyph}" />
+                <Setter TargetName="checkBoxBorder" Property="Background" Value="{theme:ThemeResource ResourceKey=ControlMouseOverBackground}" />
+                <Setter TargetName="checkBoxBorder" Property="BorderBrush" Value="{theme:ThemeResource ResourceKey=ControlMouseOverBorder}" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
-                <Setter TargetName="checkBoxBorder" Property="Background" Value="{StaticResource OptionMark.Disabled.Background}" />
-                <Setter TargetName="checkBoxBorder" Property="BorderBrush" Value="{StaticResource OptionMark.Disabled.Border}" />
-                <Setter TargetName="optionMark" Property="Fill" Value="{StaticResource OptionMark.Disabled.Glyph}" />
-                <Setter TargetName="indeterminateMark" Property="Fill" Value="{StaticResource OptionMark.Disabled.Glyph}" />
+                <Setter Property="Opacity" Value="{theme:ThemeResource ResourceKey=ControlDisabledOpacity}" />
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
-                <Setter TargetName="checkBoxBorder" Property="Background" Value="{StaticResource OptionMark.Pressed.Background}" />
-                <Setter TargetName="checkBoxBorder" Property="BorderBrush" Value="{StaticResource OptionMark.Pressed.Border}" />
-                <Setter TargetName="optionMark" Property="Fill" Value="{StaticResource OptionMark.Pressed.Glyph}" />
-                <Setter TargetName="indeterminateMark" Property="Fill" Value="{StaticResource OptionMark.Pressed.Glyph}" />
+                <Setter TargetName="checkBoxBorder" Property="Background" Value="{theme:ThemeResource ResourceKey=ControlPressedBackground}" />
+                <Setter TargetName="checkBoxBorder" Property="BorderBrush" Value="{theme:ThemeResource ResourceKey=ControlPressedBorder}" />
             </Trigger>
             <Trigger Property="IsChecked" Value="true">
                 <Setter TargetName="optionMark" Property="Opacity" Value="1" />
@@ -84,7 +76,20 @@
                 <Setter TargetName="optionMark" Property="Opacity" Value="0" />
                 <Setter TargetName="indeterminateMark" Property="Opacity" Value="1" />
             </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter TargetName="FocusBorder" Property="Visibility" Value="Visible" />
+            </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    <Style x:Key="CheckBoxStyle" TargetType="{x:Type CheckBox}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="{theme:ThemeResource ResourceKey=ContentBackground}" />
+        <Setter Property="BorderBrush" Value="{theme:ThemeResource ResourceKey=ControlBorder}" />
+        <Setter Property="Foreground" Value="{theme:ThemeResource ResourceKey=ControlForeground}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template" Value="{StaticResource CheckBoxTemplate}" />
+    </Style>
+
+    <Style BasedOn="{StaticResource CheckBoxStyle}" TargetType="{x:Type CheckBox}" />
 
 </ResourceDictionary>
