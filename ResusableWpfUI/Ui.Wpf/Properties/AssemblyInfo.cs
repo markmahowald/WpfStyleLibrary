@@ -28,6 +28,7 @@ using System.Windows.Markup;
 [assembly: XmlnsDefinition("http://NotARealSite.com/2019/ui/wpf", "Ui.Wpf.Controls")]
 [assembly: XmlnsDefinition("http://NotARealSite.com/2019/ui/wpf", "Ui.Wpf.Converters")]
 [assembly: XmlnsDefinition("http://NotARealSite.com/2019/ui/wpf", "Ui.Wpf.Controls")]
+[assembly: XmlnsDefinition("http://NotARealSite.com/2019/ui/wpf", "Ui.Wpf.AttachedProperties")]
 
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

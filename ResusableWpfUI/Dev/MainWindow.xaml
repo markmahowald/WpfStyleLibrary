@@ -23,6 +23,7 @@
             Click="OnClick"
             Content="SwitchTheme"
             IsDefault="True" />
+
         <GroupBox
             Width="200"
             HorizontalAlignment="Center"
@@ -45,6 +46,10 @@
                 <Button
                     Margin="0,8"
                     Content="Button" />
+                <Button
+                    Margin="0,8"
+                    gui:ButtonProperties.CornerRadius="4"
+                    Content="Button with rounded corners" />
                 <CheckBox
                     Margin="0,8"
                     Content="CheckBox" />
