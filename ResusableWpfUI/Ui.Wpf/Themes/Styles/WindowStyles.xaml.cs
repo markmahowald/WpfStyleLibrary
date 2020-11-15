@@ -18,7 +18,6 @@ namespace Ui.Wpf
         private void OnMaximizeRestoreClick(object sender, RoutedEventArgs e)
         {
             var window = (Window)((FrameworkElement)sender).TemplatedParent;
-            window.Close();
             if (window.WindowState == WindowState.Normal)
             {
                 window.WindowState = WindowState.Maximized;

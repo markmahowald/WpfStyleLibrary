@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Dev.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:gui="clr-namespace:Ui.Wpf;assembly=Ui.Wpf"
+    xmlns:gui="http://NotARealSite.com/2019/ui/wpf"
     Title="MainWindow"
     Width="800"
     Height="450"
@@ -75,6 +75,27 @@
                 <TextBox
                     Margin="0,8"
                     Text="TextBox" />
+                <WrapPanel
+                    Margin="0,8,0,8"
+                    Orientation="Horizontal">
+                    <WrapPanel.Resources>
+                        <Style TargetType="{x:Type gui:XamlImage}">
+                            <Setter Property="Width" Value="24" />
+                            <Setter Property="Height" Value="24" />
+                            <Setter Property="Foreground" Value="{gui:ThemeResource ResourceKey=GlyphForeground}" />
+                        </Style>
+                    </WrapPanel.Resources>
+                    <gui:XamlImage Template="{DynamicResource Icon_Add}" />
+                    <gui:XamlImage Template="{DynamicResource Icon_Close}" />
+                    <gui:XamlImage Template="{DynamicResource Icon_Delete}" />
+                    <gui:XamlImage Template="{DynamicResource Icon_Expand}" />
+                    <gui:XamlImage Template="{DynamicResource Icon_Logo}" />
+                    <gui:XamlImage Template="{DynamicResource Icon_Maximize}" />
+                    <gui:XamlImage Template="{DynamicResource Icon_Minimize}" />
+                    <gui:XamlImage Template="{DynamicResource Icon_Restore}" />
+                    <gui:XamlImage Template="{DynamicResource Icon_TeRex}" />
+                    <gui:XamlImage Template="{DynamicResource Icon_Theme}" />
+                </WrapPanel>
             </StackPanel>
         </GroupBox>
 
