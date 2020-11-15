@@ -35,7 +35,16 @@ namespace Ui.Wpf
         }
         private void OnThemeClick(object sender, RoutedEventArgs e)
         {
-            var theme = Theme.ThemeType == ThemeType.Light ? ThemeType.Dark : ThemeType.Light;
+            if(Theme.ThemeType == ThemeType.Light)
+            {
+                Theme.ThemeType = ThemeType.Dark;
+            }
+            else
+            {
+                Theme.ThemeType = ThemeType.Light;
+            }
+            Theme.LoadThemeType(Theme.ThemeType);
+
         }
 
     }

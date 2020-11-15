@@ -4,7 +4,10 @@
     xmlns:gui="clr-namespace:Ui.Wpf;assembly=Ui.Wpf"
     Title="MainWindow"
     Width="800"
-    Height="450">
+    Height="450"
+    Style="{DynamicResource MainWindowStyle}">
+
+
     <Grid Background="{gui:ThemeResource ResourceKey=ContentBackground}">
         <CheckBox x:Name="EnabledInput"
             Margin="8"

@@ -59,10 +59,12 @@ namespace Ui.Wpf
                     SetResource(ThemeResourceKey.WindowBorder.ToString(), new SolidColorBrush(ColorFromHex("#FF616D7B")));
                     SetResource(ThemeResourceKey.WindowActiveBorder.ToString(), new SolidColorBrush(ColorFromHex("#FF833AB4")));
                     SetResource(ThemeResourceKey.WindowControlMouseOverBackground.ToString(), new SolidColorBrush(ColorFromHex("#FF000000")));
-                    //SetResource(ThemeResourceKey.WindowHeaderBackground.ToString, new GradientBrush()
-                    //SetResource(ThemeResourceKey.WindowHeaderBackground.ToString(), new SolidColorBrush(ColorFromHex("#FF833AB4 #FFFD1D1D")));
-                    SetResource(ThemeResourceKey.WindowHeaderForeground.ToString(), new SolidColorBrush(ColorFromHex("#FFFFFFFF")));
+                     SetResource(ThemeResourceKey.WindowHeaderForeground.ToString(), new SolidColorBrush(ColorFromHex("#FFFFFFFF")));
 
+                    Color lightThemeStartColor = ColorFromHex("#FF833AB4");
+                    Color lightThemeEndColor = ColorFromHex("#FFFD1D1D");
+                    LinearGradientBrush WindowHeaderBackgroundGradientBrushLightTheme = new LinearGradientBrush(lightThemeStartColor, lightThemeEndColor, 0.0);
+                    SetResource(ThemeResourceKey.WindowHeaderBackground.ToString(), WindowHeaderBackgroundGradientBrushLightTheme);
 
                     break;
 
@@ -92,10 +94,13 @@ namespace Ui.Wpf
                     SetResource(ThemeResourceKey.WindowBorder.ToString(), new SolidColorBrush(ColorFromHex("#FF616D7B")));
                     SetResource(ThemeResourceKey.WindowActiveBorder.ToString(), new SolidColorBrush(ColorFromHex("#FF833AB4")));
                     SetResource(ThemeResourceKey.WindowControlMouseOverBackground.ToString(), new SolidColorBrush(ColorFromHex("#FF000000")));
-                    //SetResource(ThemeResourceKey.WindowHeaderBackground.ToString(), new SolidColorBrush(ColorFromHex("##FF833AB4 #FFFD1D1D")));
                     SetResource(ThemeResourceKey.WindowHeaderForeground.ToString(), new SolidColorBrush(ColorFromHex("#FFFFFFFF")));
 
-
+                    Color darkThemeStartColor = ColorFromHex("#FF833AB4");
+                    Color darkThemeEndColor = ColorFromHex("#FFFD1D1D");
+                    LinearGradientBrush WindowHeaderBackgroundGradientBrushDarkTheme = new LinearGradientBrush(darkThemeStartColor, darkThemeEndColor, 0.0);
+                    SetResource(ThemeResourceKey.WindowHeaderBackground.ToString(), WindowHeaderBackgroundGradientBrushDarkTheme);
+                    
                     break;
 
                 default:
